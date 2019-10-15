@@ -15,7 +15,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/AlexandruRoman/snippets-store-backend">
+  <a href="https://github.com/AlexandruRoman/snippets-store-frontend">
     <img src="logo.png" alt="Logo" width="120" height="120">
   </a>
 
@@ -25,9 +25,9 @@
     The perfect place for your code inspiration
     <br />
     <br />
-    <a href="https://github.com/AlexandruRoman/snippets-store-backend/issues">Report Bug</a>
+    <a href="https://github.com/AlexandruRoman/snippets-store-frontend/issues">Report Bug</a>
     ·
-    <a href="https://github.com/AlexandruRoman/snippets-store-backend/issues">Request Feature</a>
+    <a href="https://github.com/AlexandruRoman/snippets-store-frontend/issues">Request Feature</a>
   </p>
 </p>
 
@@ -49,7 +49,7 @@
 
 ## About The Project
 
-[![Snippet Store Showcase][product-screenshot]](https://github.com/AlexandruRoman/snippets-store-backend)
+[![Snippet Store Showcase][product-screenshot]](https://github.com/AlexandruRoman/snippets-store-frontend)
 
 Snippets Store is an online platform which was built with the purpose of helping programmers build good looking interfaces. Web programming is a vast domain, frontend programmers are facing day by day more and more challenges implementing applications that are conforming with modern quality standards, making them to focus more on optimisations, micro-interactions and complex flows instead of design aspects. In the same time, the design proces a complex task, a domain in continual transformation and change of trends.
 
@@ -57,11 +57,12 @@ The term of programming is used having in mind scripting languages and not decla
 
 ### Built With
 
-- [Node.js](https://nodejs.org)
-- [Express.js](https://expressjs.com)
+- [React](https://reactjs.org)
+- [Redux](https://redux.js.org)
+- [Braintree](https://www.braintreepayments.com)
+- [redux-first-router](https://github.com/faceyspacey/redux-first-router)
+- [redux-saga](https://github.com/redux-saga/redux-saga)
 - [TypeScript](https://www.typescriptlang.org)
-- [Mongo DB](https://www.mongodb.com)
-- [Mongoose](https://mongoosejs.com/)
 
 <!-- GETTING STARTED -->
 
@@ -78,7 +79,7 @@ To get a local copy up and running follow these simple example steps.
 1. Clone the repo
 
 ```sh
-git clone https://github.com/AlexandruRoman/snippets-store-backend.git
+git clone https://github.com/AlexandruRoman/snippets-store-frontend.git
 ```
 
 2. Install NPM packages
@@ -87,36 +88,36 @@ git clone https://github.com/AlexandruRoman/snippets-store-backend.git
 npm install
 ```
 
-3. Enter your Mongo connection string in `src/mongo.ts`
+3. Enter your API url in `src/_brain/_helpers/api.ts`
 
 ```JS
-const url = 'YOUR CONNECTION STRING'
+const api = axios.create({
+    baseURL: 'YOUR API URL',
+    ...
+})
 ```
 
 <!-- USAGE EXAMPLES -->
 
 ## Usage
 
-This REST API has the endpoints grouped in 4 main categories:
+Running the app in dev mode:
 
-- finance
-- identity
-- impressions
-- products
+```sh
+npm start
+```
 
-These endpoints can be found under src/\_GROUP. The API project uses a feature first architecture so the each endpoint has his own separate file.
+Creating a production build of the app:
 
-An example of getting the details of a snippet using curl:
-
-```bash
-curl -X GET http://localhost/snippet/get/3
+```sh
+npm run build
 ```
 
 <!-- ROADMAP -->
 
 ## Roadmap
 
-See the [open issues](https://github.com/AlexandruRoman/snippets-store-backend/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/AlexandruRoman/snippets-store-frontend/issues) for a list of proposed features (and known issues).
 
 <!-- CONTRIBUTING -->
 
@@ -143,14 +144,14 @@ Distributed under the MIT License.
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/AlexandruRoman/snippets-store-backend.svg?style=flat-square
-[contributors-url]: https://github.com/AlexandruRoman/snippets-store-backend/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/AlexandruRoman/snippets-store-backend.svg?style=flat-square
-[forks-url]: https://github.com/AlexandruRoman/snippets-store-backend/network/members
-[stars-shield]: https://img.shields.io/github/stars/AlexandruRoman/snippets-store-backend.svg?style=flat-square
-[stars-url]: https://github.com/AlexandruRoman/snippets-store-backend/stargazers
-[issues-shield]: https://img.shields.io/github/issues/AlexandruRoman/snippets-store-backend.svg?style=flat-square
-[issues-url]: https://github.com/AlexandruRoman/snippets-store-backend/issues
+[contributors-shield]: https://img.shields.io/github/contributors/AlexandruRoman/snippets-store-frontend.svg?style=flat-square
+[contributors-url]: https://github.com/AlexandruRoman/snippets-store-frontend/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/AlexandruRoman/snippets-store-frontend.svg?style=flat-square
+[forks-url]: https://github.com/AlexandruRoman/snippets-store-frontend/network/members
+[stars-shield]: https://img.shields.io/github/stars/AlexandruRoman/snippets-store-frontend.svg?style=flat-square
+[stars-url]: https://github.com/AlexandruRoman/snippets-store-frontend/stargazers
+[issues-shield]: https://img.shields.io/github/issues/AlexandruRoman/snippets-store-frontend.svg?style=flat-square
+[issues-url]: https://github.com/AlexandruRoman/snippets-store-frontend/issues
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
 [linkedin-url]: https://www.linkedin.com/in/alexandru-daniel-roman/
 [product-screenshot]: screenshot.png
