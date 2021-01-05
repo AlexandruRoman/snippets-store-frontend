@@ -11,7 +11,7 @@
         "@types/react-redux": "^7.0.6",
         "@types/redux": "^3.6.0",
         "@types/redux-first-router": "^2.1.1",
-        "axios": "^0.18.0",
+        "axios": "^0.21.1",
         "bootstrap": "3.3.4",
         "braintree-web-drop-in-react": "^1.0.7",
         "chart.js": "^2.8.0",
